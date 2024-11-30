@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".Contact_Page">
+
+    <!-- Barre de navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:id="@+id/navBar"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contactez-nous"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Affichage des informations de l'utilisateur -->
+    <TextView
+        android:id="@+id/tvUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom d'utilisateur : John Doe\nEmail : john.doe@example.com"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black" />
+
+    <!-- Champ Message -->
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Votre message"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="16dp" />
+
+    <!-- Bouton d'envoi -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Envoyer"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>

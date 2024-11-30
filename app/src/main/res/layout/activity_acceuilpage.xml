@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acceuilpage">
+
+    <!-- Barre de navigation -->
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#000000"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <!-- Ligne de bienvenue et déconnexion -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <!-- Message de bienvenue -->
+            <TextView
+                android:id="@+id/userNameText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bienvenue, Nom de l'utilisateur"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:gravity="center" />
+
+            <!-- Bouton de déconnexion -->
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Ligne de navigation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Bouton de navigation vers Menus -->
+            <Button
+                android:id="@+id/btnMenus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menus"
+                android:textColor="#FFFFFF"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginRight="5dp" />
+
+            <!-- Bouton de navigation vers Avis -->
+            <Button
+                android:id="@+id/btnAvis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avis"
+                android:textColor="#FFFFFF"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginRight="5dp" />
+
+            <!-- Bouton de navigation vers Contacts -->
+            <Button
+                android:id="@+id/btnContacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contacts"
+                android:textColor="#FFFFFF"
+                android:background="?android:attr/selectableItemBackground" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Image du restaurant -->
+    <ImageView
+        android:id="@+id/restaurantImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/navbar"
+        android:scaleType="centerCrop"
+        android:contentDescription="Image du restaurant"
+        android:layout_marginTop="10dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@android:color/transparent" />
+
+    <!-- Contenu principal -->
+    <ScrollView
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/restaurantImage"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon restaurant"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/addressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/typeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type : Fast-food"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/phoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/localisationButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voir localisation"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#6200EE"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Exemple de contenu de pied de page -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2024 Mon Restaurant"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>
